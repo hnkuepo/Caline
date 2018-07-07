@@ -176,3 +176,53 @@ body {
 #night-view {
   padding-top: 10px;
 }
+
+/*Tour Guide*/
+
+.tour-video {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.fullscreen-tourwrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-tourwrap video {
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+.Header-titles {
+  z-index: 2;
+
+}
+
+.Header-titles h1 {
+  font-family: Monoton;
+  font-size: 2.1rem;
+  color: yellowgreen;
+  background: whitesmoke;
+}
+
+.Header-titles p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: cornsilk;
+}
+
+.in-touch {
+  background: yellowgreen;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+}
