@@ -17,10 +17,71 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.css"/>
   <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
 
+  <!--Gallery-->
+  <style type="text/css">
+  div#imageholder {
+    width: 850px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: silver;
+  }
+
+  div#largeimage {
+    width: 800px;
+    height: 400px;
+    background-color: yellowgreen;
+    margin: 0 auto;
+  }
+
+  div#thumbnail {
+    width: 900px;
+    height: 100px;
+    background-color: white;
+    margin:5px auto;
+    padding: 5px;
+  }
+
+  div#largeimage > img {
+    width: 700px;
+    height: 400px;
+  }
+
+  div#thumbnail > img {
+    height: 85px;
+    width: 85px;
+    display: block;
+    float: left;
+    margin: 2px;
+    transition: border-radius 0.3s linear 0s;
+  }
+
+  div#thumbnail > img:hover {
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  </style>
+
   <!--JavaScript-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
   <script type="text/javascript" src="./resources/js/main.js"></script>
+  <!--javascript Gallery-->
+      <script type="text/javascript">
+          function imgFunc() {
+            var bigImage = document.getElementById("bigImage");
+            var thumbnail = document.getElementById("thumbnail");
+
+            thumbnail.addEventListener("click",function(event){
+              if (event.target.tagName == "IMG") {
+                bigImage.src = event.target.src;
+              }
+
+            },false);
+          }
+
+          window.addEventListener("load",imgFunc,false);
+      </script>
+
 </head>
 
 <body>
@@ -42,24 +103,59 @@
 
   <!--Header-->
   <div class="container">
-    <h1 class="apartment">Caline VIP Apartment | Great Location</h1>
-    <img src="resources/images/mountain.jpg" alt="Mountain" width="100%" height="500px"/>
+    <h1 class="apartment">Caline VIP Two Bedrooms Apartment | Great Location</h1>
+
+    <div id="imageholder">
+      <div id="largeimage">
+        <img src="resources/images/doublebed.jpg" id="bigImage" alt="Night View" />
+      </div>
+
+      <div id="thumbnail">
+        <img src="resources/images/doublebed.jpg" alt="Night View" />
+        <img src="resources/images/apartmentview.jpg" alt="Apartment View" />
+        <img src="resources/images/double.jpg" alt="two beds" />
+        <img src="resources/images/livingtv.jpg" alt="Living Room TV" />
+        <img src="resources/images/room.jpg" alt="Bedroom" />
+        <img src="resources/images/livingroom.jpg" alt="living room couch" />
+        <img src="resources/images/capeview.jpg" alt="Night View" />
+        <img src="resources/images/logo.jpg" alt="Logo" />
+      </div>
+    </div>
+
+    <!--<img src="resources/images/mountain.jpg" alt="Mountain" width="100%" height="500px"/>-->
 
     <!--Apartment Pictures-->
     <div class="description">
       <p>Located 6 miles from Robben Island Museum, Caline VIP has barbecue facilities, a terrace and free WiFi. Each unit includes a seating area with a flat-screen TV with satellite channels, a kitchen with a dining area, and a private bathroom. An oven and coffee machine are also provided. Windsurfing can be enjoyed nearby.</p>
       <p>Popular points of interest near the apartment include Bloubergstrand, Blaauwberg Scout hall and West Coast Village Shopping Centre. The nearest airport is Cape Town International Airport, 13 miles from Caline VIP. This is our guests' favorite part of Bloubergstrand, according to independent reviews.</p>
       <p>Guests who stayed here are talking about these popular landmarks: Bloubergstrand, Bayside Mall, and Robben Island Museum.</p>
+      <p>In addition to our two holiday apartments in Cape Town, we make reservations for our guests anywhere in south Africa.</p>
     </div>
-          <!--Logo-->
-          <img id="booking" src="resources/images/Logo.jpg" alt="logo" width="70" height="70"/>
-          <p class="address">44 coral road blouberg, 7441 Bloubergstrand, South Africa</p>
-          <a class="book-me" href="https://www.booking.com/hotel/za/caline-vip.html?aid=304142;label=gen173nr-1FCAEoggJCAlhYSDNYBHIFdXNfdmGIAQGYATG4AQfIAQzYAQHoAQH4AQKSAgF5qAID;sid=fb5ebf918c1663cba46c3bebed640296;checkin=2018-07-07;checkout=2018-07-08;dist=0;group_adults=2;hapos=3;hpos=3;place_id=ChIJZRI85Z1fzB0RmDYzzi5MFUg;place_id_lat=-33.81544;place_id_lon=18.474269999999933;place_id_ss=42%20Coral%20Road%2C%20Table%20View%2C%20Cape%20Town%2C%20South%20Africa;room1=A%2CA;sb_price_type=total;soh=1;soldout=0%2C0;spdist=0.104212040938587;srepoch=1530368833;srfid=680a26ea160d47a114afff53773a806a8e36917eX3;srpvid=723965a0a7bb0258;type=total;ucfs=1&#availability" target="_blank">BOOK WITH US</a>
+    <!--Logo-->
+    <div>
+      <img id="booking" src="resources/images/Logo.jpg" alt="logo" width="70" height="70"/>
+      <p class="address">44 coral road blouberg, 7441 Bloubergstrand, South Africa</p>
+      <a class="book-me" href="https://www.booking.com/hotel/za/caline-vip.html" target="_blank">BOOK WITH US</a>
+    </div>
 
-        <div>
-          <img id="night-view" src="resources/images/capeview.jpg" alt="Night View" width="100%"/>
-        </div>
+    <h1 class="apartment">Caline VIP One Bedrooms Apartment | Great Location</h1>
+    <div id="imageholder">
+      <div id="largeimage">
+        <img src="resources/images/onebed.jpg" id="bigImage" alt="Night View" />
+      </div>
+
+      <div id="thumbnail">
+        <img src="resources/images/onebed.jpg" alt="bed" />
+        <img src="resources/images/onebedliving.jpg" alt="Living Room" />
+        <img src="resources/images/outside.jpg" alt="outside View" />
+        <img src="resources/images/kitchen.jpg" alt="kitchen View" />
+        <img src="resources/images/dining.jpg" alt="dining View" />
+
+      </div>
+    </div>
+
   </div>
+
 
   <!--Footer-->
   <footer class="footer">

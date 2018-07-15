@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Gallery</title>
+    <style type="text/css">
+    div#imageholder {
+      width: 600px;
+      height: 500px;
+      margin: 0 auto;
+      background-color: silver;
+      padding: 10px;
+    }
+
+    div#largeimage {
+      width: 600px;
+      height: 400px;
+      background-color: white;
+    }
+
+    div#thumbnail {
+      width: 590px;
+      height: 100px;
+      background-color: white;
+      margin: 5px auto;
+      padding: 5px;
+    }
+
+    div#largeimage > img {
+      width: 600px;
+      height: 400px;
+    }
+
+    div#thumbnail > img {
+      height: 90px;
+      width: 90px;
+      display: block;
+      float: left;
+      margin: 2px;
+      transition: border-radius 0.3s linear 0s;
+    }
+
+    div#thumbnail > img:hover {
+      border-radius: 100px;
+      cursor: pointer;
+    }
+    </style>
+
+<!--javascript Gallery-->
+    <script type="text/javascript">
+        function imgFunc() {
+          var bigImage = document.getElementById("bigImage");
+          var thumbnail = document.getElementById("thumbnail");
+
+          thumbnail.addEventListener("click",function(event){
+            if (event.target.tagName == "IMG") {
+              bigImage.src = event.target.src;
+            }
+
+          },false);
+        }
+
+
+        window.addEventListener("load",imgFunc,false);
+    </script>
+
+
+  </head>
+  <body>
+    <div id="imageholder">
+      <div id="largeimage">
+        <img src="resources/images/capeview.jpg" id="bigImage" alt="Night View" />
+
+      </div>
+
+      <div id="thumbnail">
+        <img src="resources/images/capeview.jpg" alt="Night View" />
+        <img src="resources/images/double.jpg" alt="Night View" />
+        <img src="resources/images/doublebed.jpg" alt="Night View" />
+        <img src="resources/images/livingtv.jpg" alt="Night View" />
+        <img src="resources/images/room.jpg" alt="Night View" />
+        <img src="resources/images/capeview.jpg" alt="Night View" />
+
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

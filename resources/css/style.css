@@ -10,6 +10,12 @@ body {
   line-height: 1.5;
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
 .navbar-default .navbar-nav > .active > a {
   color: #399bd1;
 }
@@ -30,16 +36,20 @@ body {
   display: flex;
   align-items: center;
   color: white;
-
 }
 
 .container {
-  max-width: 960px;
+  width:960px;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
   text-align: center;
   justify-content: center;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
 }
 
 .fullscreen-wrap {
@@ -79,7 +89,7 @@ body {
 }
 
 .Header-title p {
-  font-size: 21px;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
@@ -109,7 +119,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
-  font-size: 14px;
+  font-size: 1em;
   align-items: flex-start;
   flex-direction: row;
   width: 85%;
@@ -141,6 +151,24 @@ body {
   background-size: cover;
 }
 
+.about-caline {
+  padding-top: 70px;
+  padding-bottom: 10px;
+  font-family: Monoton;
+  font-size: 1.5rem;
+  color: Black;
+  text-decoration: bold;
+  color: yellowgreen;
+}
+
+.Header-title .about {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: black;
+  text-align: left;
+  padding: 5px;
+}
+
 /*Booking PAGE*/
 
 .apartment {
@@ -153,8 +181,16 @@ body {
   color: yellowgreen;
 }
 
+.description {
+  background-color: khaki;
+  margin: 10px;
+  padding: 5px;
+}
+
 .description p {
   text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .address {
@@ -214,7 +250,7 @@ body {
 }
 
 .Header-titles p {
-  font-size: 18px;
+  font-size: 1.2em;
   margin-bottom: 20px;
   color: cornsilk;
 }
@@ -226,3 +262,35 @@ body {
   text-decoration: none;
   color: white;
 }
+
+/*Media CSS*/
+
+@media screen and (max-width: 959px) {
+  .container {
+    width: 100%;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  video {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
+
+/*Gallery*/
